@@ -1,0 +1,182 @@
+let SecondLine = document.createElement('div');
+                    SecondLine.className = 'Title2'
+                    SecondLine.id = 'page1stuff'
+                    SecondLine.textContent = 'Other Stuff\nLike FNF Games'
+                    SecondLine.textContent = 'Other Stuff'
+                    document.getElementById('ButtonContainer').appendChild(SecondLine)
+
+                    // Call the height adjustment function initially
+@@ -63,7 +63,8 @@
+                        'cg5',
+                        'kapi-v2',
+                        'momi',
+                        'sky'
+                        'sky',
+                        'Minecraft (NEW!!)'
+                    ]
+                    for (let i = 0; i < PagesLOL2.length; i++) {
+                        setTimeout(() => {
+@@ -72,7 +73,14 @@
+                            PageHa2.id = 'Page2ID' + i
+                            PageHa2.href = '/' + PagesLOL2[i]
+                            PageHa2.textContent = PagesLOL2[i]
+                            if(PagesLOL2[i] == 'Minecraft (NEW!!)') {
+                                PageHa2.href = '/Minecraft'
+                            } else {
+                                PageHa2.href = '/' + PagesLOL2[i]
+                            }
+
+                            console.log(PagesLOL2[i])
+
+                            document.getElementById('ButtonContainer').appendChild(PageHa2)
+
+                            // Call the height adjustment function initially
+ 1 change: 1 addition & 0 deletions1  
+Minecraft/README.md
+@@ -0,0 +1 @@
+zj684od4lfg
+ Binary file addedBIN +6.21 MB 
+Minecraft/assets.epk
+Binary file not shown.
+ 19,441 changes: 19,441 additions & 0 deletions19,441  
+Minecraft/classes.js
+Large diffs are not rendered by default.
+
+ 1 change: 1 addition & 0 deletions1  
+Minecraft/classes.js.map
+Large diffs are not rendered by default.
+
+ 17,491 changes: 17,491 additions & 0 deletions17,491  
+Minecraft/classes10.js
+Large diffs are not rendered by default.
+
+ 16,295 changes: 16,295 additions & 0 deletions16,295  
+Minecraft/classes_server.js
+Large diffs are not rendered by default.
+
+ 1 change: 1 addition & 0 deletions1  
+Minecraft/classes_server.js.map
+Large diffs are not rendered by default.
+
+ 29 changes: 29 additions & 0 deletions29  
+Minecraft/eagswebrtc.js
+Some generated files are not rendered by default. Learn more about how customized files appear on GitHub.
+
+ Binary file addedBIN +199 KB 
+Minecraft/favicon.ico
+Binary file not shown.
+ Binary file addedBIN +3.11 KB 
+Minecraft/favicon.png
+
+ Binary file addedBIN +18.8 KB 
+Minecraft/grass.png
+
+ 93 changes: 93 additions & 0 deletions93  
+Minecraft/index.html
+@@ -0,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Drive - Google Drive</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Eaglercraft is real Minecraft 1.5.2 that you can play in any regular web browser. That includes school chromebooks, it works on all chromebooks. It supports both singleplayer and multiplayer with no extensions."
+    />
+    <meta name="keywords" content="minecraft, eaglercraft, singleplayer, applet, replit, browser, html5, javascript, chromebook, lax1dude, games, eagler" />
+    <meta name="author" content="lax1dude" />
+    <meta property="og:title" content="My Drive - Google Drive" />
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://media.discordapp.net/attachments/378764518081429506/932053915061587978/thumbnail2.png" />
+    <meta
+      property="og:description"
+      content="Eaglercraft is real Minecraft 1.5.2 that you can play in any regular web browser. That includes school chromebooks, it works on all chromebooks. It supports both singleplayer and multiplayer with no extensions."
+    />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script type="text/javascript" src="classes.js"></script>
+    <script type="text/javascript" src="eagswebrtc.js"></script>
+    <script src="https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/addc4348-16c2-4645-9dff-f99b962e39ef%2Fscr.js"></script>
+    <script type="text/javascript">
+      if (document.location.href.startsWith("file:")) {
+        alert(
+          "You cannot 'open' this file in your browser, the code doesn't work. Upload this folder to your HTTP(s) server and access it via the internet to launch the stable-download game. This is not a bug, please read the documentation."
+        );
+      } else {
+        window.addEventListener("load", function () {
+          const relayId = Math.floor(Math.random() * 3);
+          window.eaglercraftOpts = {
+            container: "game_frame",
+            assetsURI: "assets.epk",
+            serverWorkerURI: "worker_bootstrap.js",
+            worldsFolder: "MAIN",
+            servers: [
+              {
+                serverName: "YHS Server",
+                serverAddress: "wss://starrmc.my.to/mcserver/",
+                hideAddress: true,
+              },
+              {
+                serverName: "YHS PVP Server",
+                serverAddress: "wss://starrmc.my.to/mcserver2/",
+                hideAddress: true,
+              },
+              {
+                serverName: "Brett's Test Server",
+                serverAddress: "wss://thebrettyt.vercel.app/McServer/",
+                hideAddress: true,
+              },
+            ],
+            relays: [
+              {
+                addr: "wss://relay.deev.is/",
+                name: "lax1dude relay #1",
+                primary: relayId == 0,
+              },
+              {
+                addr: "wss://relay.lax1dude.net/",
+                name: "lax1dude relay #2",
+                primary: relayId == 1,
+              },
+              {
+                addr: "wss://relay.shhnowisnottheti.me/",
+                name: "ayunami relay #1",
+                primary: relayId == 2,
+              },
+            ],
+            mainMenu: {
+              splashes: ["Darviglet!", "eaglerenophile!", "You Eagler!", "Yeeeeeee!", "yeee", "Echo on top!", "3kh0.github.io", "Echo is cool", "REEEEEEE", "EEEEEEEEE!", "You Darvig!", "You Vigg!", ":>", "|>", "You Yumpster!"],
+              eaglerLogo: false,
+            },
+          };
+
+          (function () {
+            var q = window.location.search;
+            if (typeof q === "string" && q.startsWith("?")) {
+              q = new URLSearchParams(q);
+              var s = q.get("server");
+              if (s) window.minecraftOpts.push(s);
+            }
+          })();
+          main();
+        });
+      }
+    </script>
+  </head>
+  <body style="margin: 0px; width: 100vw; height: 100vh; onclick="window.focus()"; id="game_frame" onclick="window.focus()"></body>
+</html>
+ Binary file addedBIN +50.4 KB 
+Minecraft/splash.jpeg
+
+ 5 changes: 5 additions & 0 deletions5  
+Minecraft/worker_bootstrap.js
+@@ -0,0 +1,5 @@
+onmessage = function(o) {
+	importScripts("classes_server.js");
+	eaglercraftServerOpts = o.data;
+	main();
+};
+ 34,807 changes: 34,807 additions & 0 deletions34,807  
+Minecraft1.8.8/EaglercraftX_1.8_Offline_International.html
